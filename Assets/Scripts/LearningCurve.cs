@@ -18,7 +18,7 @@ public class LearningCurve : MonoBehaviour
         Debug.Log(camTransform.localPosition);
         Character hero = new Character();
         Character hero2 = hero;
-        hero2.name = "Vlad ebaniy";
+        hero2.name = "Vlad";
         
      //   hero.PrintStatsInfo();
        // hero2.PrintStatsInfo();
