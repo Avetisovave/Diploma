@@ -12,8 +12,8 @@ public class CameraBehavior : MonoBehaviour
 
    private void Start()
    {
-      target = GameObject.Find("Player").transform;
-      
+       target = FindObjectOfType<PlayerBehavior>().transform;
+
    }
    //4
    void LateUpdate()

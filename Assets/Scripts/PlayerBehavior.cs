@@ -25,7 +25,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<CapsuleCollider>();
-        _gameManager = GameObject.Find("Game Manager").GetComponent<GameBehavior>();
+        _gameManager = FindObjectOfType<GameBehavior>();
     }
 
     void Update()
@@ -71,7 +71,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Enemy")
+        if (collision.gameObject.TryGetComponent<EnemyBehavior>(out var enemy))
         {
             _gameManager.HP -= 1;
         }

@@ -6,13 +6,9 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
-    public GameBehavior gameManager;
-
-    private void Start()
-    {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameBehavior>();
-    }
-
+  
+    [SerializeField] private GameBehavior gameManager;
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")

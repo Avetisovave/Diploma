@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -290,6 +290,11 @@ PrefabInstance:
     - target: {fileID: 1969320182274804736, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
       propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 503881529}
+    - target: {fileID: 1969320182274804736, guid: 8464f132721814c45844a6b4133188bf,
+        type: 3}
+      propertyPath: gameBehavior
       value: 
       objectReference: {fileID: 503881529}
     - target: {fileID: 4885759035495420257, guid: 8464f132721814c45844a6b4133188bf,
@@ -1542,6 +1547,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210773726}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1245738973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5032752659307322265, guid: d994b476021ed924c851ff432046fdbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5032752659677218913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1275851593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,6 +2412,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3370578239345361388, guid: ecf597ec36a158846b8659a4ac64848e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1245738973}
     - target: {fileID: 3370578239345361388, guid: ecf597ec36a158846b8659a4ac64848e,
         type: 3}
       propertyPath: patrolRoute
