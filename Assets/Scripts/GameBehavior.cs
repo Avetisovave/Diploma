@@ -21,10 +21,7 @@ public class GameBehavior : MonoBehaviour
             _itemsCollected = value;
             if (_itemsCollected >= maxItems)
             {
-                labelText = "You have found all the items";
-                showWinScreen = true;
-
-                Time.timeScale = 0f;
+                WinScreen(labelText, showWinScreen, Time.deltaTime);
             }
             else
             {
@@ -45,9 +42,7 @@ public class GameBehavior : MonoBehaviour
             _playerHP = value;
             if (_playerHP <= 0)
             {
-                labelText = "You want another life with that?";
-                showLossScreen = true;
-                Time.timeScale = 0;
+                LossScreen(labelText, showLossScreen, Time.deltaTime);
             }
             else
             {
@@ -56,6 +51,26 @@ public class GameBehavior : MonoBehaviour
 
             Debug.LogFormat("Lives: {0}", _playerHP);
         }
+    }
+
+    void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1.0f;
+    }
+
+    void WinScreen(string winText, bool winScreen, float time)
+    {
+        winText = labelText = "You have found all the items";
+        winScreen = showWinScreen = true;
+        time = Time.timeScale = 0f;
+    }
+
+    void LossScreen(string lossText, bool loosScreen, float time)
+    {
+        lossText = labelText = "You want another life with that?";
+        loosScreen = showLossScreen = true;
+        time = Time.timeScale = 0f;
     }
 
     private void OnGUI()
@@ -71,8 +86,7 @@ public class GameBehavior : MonoBehaviour
             if (GUI.Button(new Rect(Screen.width / 2 - 100,
                     Screen.height / 2 - 50, 200, 100), "YOU WON"))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                Time.timeScale = 1.0f;
+                RestartLevel();
             }
         }
 
@@ -81,8 +95,7 @@ public class GameBehavior : MonoBehaviour
             if (GUI.Button(new Rect(Screen.width / 2 - 100,
                     Screen.height / 2 - 50, 200, 100), "You lose..."))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                Time.timeScale = 1.0f;
+                RestartLevel();
             }
         }
     }
