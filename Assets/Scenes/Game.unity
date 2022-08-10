@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 480286760423801690, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 480286760423801690, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 480286760423801690, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 480286760423801690, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
@@ -805,8 +805,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 758163444}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515468971
 GameObject:
@@ -1341,9 +1341,8 @@ Transform:
   - {fileID: 1569176269}
   - {fileID: 346270295}
   - {fileID: 20427555}
-  - {fileID: 503881530}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &815705750 stripped
 Transform:
@@ -2452,7 +2451,7 @@ PrefabInstance:
     - target: {fileID: 480286760423801690, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 480286760423801690, guid: 8464f132721814c45844a6b4133188bf,
         type: 3}
@@ -2715,7 +2714,6 @@ GameObject:
   - component: {fileID: 2134769563}
   - component: {fileID: 2134769562}
   - component: {fileID: 2134769561}
-  - component: {fileID: 2134769564}
   - component: {fileID: 2134769565}
   m_Layer: 9
   m_Name: Wall1
@@ -2798,22 +2796,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134769559}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2134769564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134769559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bff18019b5486545a76fc78f25cb9a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Renderers: []
-  Position: {x: 0, y: 0, z: 0}
-  Materials: []
-  InitialAlpha: 0
 --- !u!114 &2134769565
 MonoBehaviour:
   m_ObjectHideFlags: 0
